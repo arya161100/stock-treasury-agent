@@ -1,0 +1,12 @@
+[
+  {
+    "step": "reserve-breach",
+    "ok": false,
+    "rejected": true,
+    "attempted": "50000001",
+    "error": "ReserveBreach",
+    "detail": "On-chain tx status=0, vault USDC unchanged at 100. ReserveBreach.",
+    "tx": "0x2cf00ca154dee4d76f565d134c0b857feaddc665fc7494df384331083da0b448",
+    "onChainStatus": 0
+  }
+]

@@ -1,0 +1,24 @@
+# Compiler
+cache/
+out/
+
+# Broadcast: keep testnet receipts (public), ignore local anvil and dry-runs
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.logs/
+
+# Foundry
+.logs/
+
+# OS
+.DS_Store

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StockTreasury Agent — dashboard (testnet)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="banner">TESTNET ONLY · MOCK STOCK TOKENS · NOT SECURITIES · NOT INVESTMENT ADVICE · NO RIGHTS IN ANY PUBLIC COMPANY</div>
+  <header>
+    <div>
+      <p class="eyebrow">Base Stocks Maxxing · Track 2.1</p>
+      <h1>StockTreasury Agent</h1>
+      <p class="lede">An agent sells research, gets paid USDC via x402, and a vault invests only a user-set share of surplus. The operating reserve cannot be invested.</p>
+    </div>
+    <div class="meta" id="meta">loading…</div>
+  </header>
+
+  <section class="rules">
+    <h2>Allocation rules</h2>
+    <ol>
+      <li><strong>Operating reserve first.</strong> Incoming USDC fills the reserve target before anything is investable.</li>
+      <li><strong>User-set split.</strong> Of the remaining surplus, <span id="bps-label">—</span>% is investable; the rest is retained cash the agent cannot invest.</li>
+      <li><strong>Caps and allowlist.</strong> Each purchase is bounded by a per-tx cap, a daily cap, an allowlisted stock, and an allowlisted router.</li>
+      <li><strong>ReserveBreach.</strong> If a call would take USDC below the reserve, the transaction reverts. Only the human owner can withdraw the reserve.</li>
+    </ol>
+  </section>
+
+  <section class="bars" id="bars-section">
+    <h2>USDC in the vault</h2>
+    <div class="bar" id="bar"><div class="seg reserve"></div><div class="seg retained"></div><div class="seg investable"></div></div>
+    <div class="legend">
+      <span class="dot reserve"></span> Reserve <strong id="v-reserve">—</strong>
+      <span class="dot retained"></span> Retained <strong id="v-retained">—</strong>
+      <span class="dot investable"></span> Investable <strong id="v-investable">—</strong>
+      <span class="dot total"></span> Total <strong id="v-total">—</strong>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article>
+      <h2>Policy</h2>
+      <dl id="policy"></dl>
+    </article>
+    <article>
+      <h2>Holdings <small>(mock tokens)</small></h2>
+      <div id="holdings">—</div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Rejection log</h2>
+    <p class="hint">The agent is supposed to fail here. A reserve-breach attempt must revert; the vault USDC floor does not move.</p>
+    <div id="rejections" class="log"></div>
+  </section>
+
+  <section>
+    <h2>Run log</h2>
+    <div id="log" class="log"></div>
+  </section>
+
+  <footer>
+    <p>StockTreasury Agent is a competition prototype on Base Sepolia / Anvil. Mock stock tokens are clearly labeled and are not issued by Coinbase or any public company. Official Coinbase tokenized stocks exist on Base mainnet only (chain 8453) as of this build. This is not an offer to buy or sell any security. Projects that enable trading for US users are not eligible for this quest; this demo does not.</p>
+    <p><a href="https://www.base.org/stocksmaxxing" target="_blank" rel="noopener">Quest page</a> · <a href="https://www.base.org/stocksmaxxing/rules" target="_blank" rel="noopener">Official rules</a></p>
+  </footer>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

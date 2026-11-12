@@ -1,0 +1,291 @@
+[
+  {
+    "type": "function",
+    "name": "preview",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "p",
+        "type": "tuple",
+        "components": [
+          {
+            "name": "usdc",
+            "type": "address"
+          },
+          {
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "name": "agent",
+            "type": "address"
+          },
+          {
+            "name": "router",
+            "type": "address"
+          },
+          {
+            "name": "allocationBps",
+            "type": "uint16"
+          },
+          {
+            "name": "operatingReserveTarget",
+            "type": "uint256"
+          },
+          {
+            "name": "perTxCap",
+            "type": "uint256"
+          },
+          {
+            "name": "dailyCap",
+            "type": "uint256"
+          },
+          {
+            "name": "dailyUsed",
+            "type": "uint256"
+          },
+          {
+            "name": "dailyWindow",
+            "type": "uint64"
+          },
+          {
+            "name": "paused",
+            "type": "bool"
+          },
+          {
+            "name": "policySet",
+            "type": "bool"
+          },
+          {
+            "name": "usdcBalance",
+            "type": "uint256"
+          },
+          {
+            "name": "investable",
+            "type": "uint256"
+          },
+          {
+            "name": "reservedEffective",
+            "type": "uint256"
+          },
+          {
+            "name": "retained",
+            "type": "uint256"
+          },
+          {
+            "name": "lastAccounted",
+            "type": "uint256"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "syncRevenue",
+    "stateMutability": "nonpayable",
+    "inputs": [],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "allocate",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "name": "stock",
+        "type": "address"
+      },
+      {
+        "name": "usdcAmount",
+        "type": "uint256"
+      },
+      {
+        "name": "minOut",
+        "type": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "stockOut",
+        "type": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "payOperatingCost",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "name": "reason",
+        "type": "bytes32"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "maxAllocatable",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "holdings",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "tokens",
+        "type": "address[]"
+      },
+      {
+        "name": "balances",
+        "type": "uint256[]"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "investable",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "operatingReserveTarget",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "agent",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "owner",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "ReserveBreach",
+    "inputs": [
+      {
+        "name": "balance",
+        "type": "uint256"
+      },
+      {
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "name": "reserveTarget",
+        "type": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "ExceedsInvestable",
+    "inputs": [
+      {
+        "name": "requested",
+        "type": "uint256"
+      },
+      {
+        "name": "investable_",
+        "type": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "PerTxCapExceeded",
+    "inputs": [
+      {
+        "name": "requested",
+        "type": "uint256"
+      },
+      {
+        "name": "cap",
+        "type": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "DailyCapExceeded",
+    "inputs": [
+      {
+        "name": "requested",
+        "type": "uint256"
+      },
+      {
+        "name": "used",
+        "type": "uint256"
+      },
+      {
+        "name": "cap",
+        "type": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "StockNotAllowed",
+    "inputs": [
+      {
+        "name": "stock",
+        "type": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "Paused",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NotAgent",
+    "inputs": []
+  }
+]

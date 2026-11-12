@@ -1,0 +1,26 @@
+window.STOCK_TREASURY_CONFIG = {
+  "rpcUrl": "https://sepolia.base.org",
+  "chainId": 84532,
+  "vault": "0xc6a9c24316DF6305a2CA994C70e33E22eF1238AE",
+  "usdc": "0xa64f084E7701d00058f6C39F59D5C8669b280AA0",
+  "router": "0x7845C91DccD74d8EF3d6A22Fa8C7809e9d8FED0A",
+  "stocks": [
+    {
+      "symbol": "MOCK-AAPL",
+      "name": "MOCK Apple Inc (TESTNET ONLY - NOT A SECURITY)",
+      "address": "0xA0BFD72a7259AE2B2eCcEDa0ae65f268b634aD47",
+      "priceUsdc": 10.0,
+      "disclaimer": "MOCK / TESTNET ONLY. Not a security."
+    },
+    {
+      "symbol": "MOCK-NVDA",
+      "name": "MOCK NVIDIA Corp (TESTNET ONLY - NOT A SECURITY)",
+      "address": "0x5c1f3d726AFe83e4e0dC31e82f16B5555c387Ac2",
+      "priceUsdc": 20.0,
+      "disclaimer": "MOCK / TESTNET ONLY. Not a security."
+    }
+  ],
+  "explorer": "https://sepolia.basescan.org",
+  "network": "base-sepolia",
+  "mock": true
+};

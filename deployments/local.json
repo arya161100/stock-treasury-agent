@@ -1,0 +1,17 @@
+{
+  "network": "anvil",
+  "chainId": 31337,
+  "usdc": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "usdcName": "USD Coin (Mock, testnet only)",
+  "vault": "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
+  "router": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+  "agent": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "owner": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "stocks": [
+    {"symbol": "MOCK-AAPL", "name": "MOCK Apple Inc (TESTNET ONLY - NOT A SECURITY)", "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512", "priceUsdc": 10.0, "disclaimer": "MOCK / TESTNET ONLY. Not a security."},
+    {"symbol": "MOCK-NVDA", "name": "MOCK NVIDIA Corp (TESTNET ONLY - NOT A SECURITY)", "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0", "priceUsdc": 20.0, "disclaimer": "MOCK / TESTNET ONLY. Not a security."}
+  ],
+  "policy": {"allocationBps": 7000, "operatingReserveTarget": "50000000", "perTxCap": "40000000", "dailyCap": "80000000"},
+  "mock": true,
+  "notes": "Mock stock tokens. Official Coinbase tokenized stocks are Base mainnet only (chain 8453)."
+}

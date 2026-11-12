@@ -1,0 +1,73 @@
+{
+  "network": "base-sepolia",
+  "chainId": 84532,
+  "explorer": "https://sepolia.basescan.org",
+  "usdc": "0xa64f084E7701d00058f6C39F59D5C8669b280AA0",
+  "usdcKind": "mock",
+  "vault": "0xc6a9c24316DF6305a2CA994C70e33E22eF1238AE",
+  "router": "0x7845C91DccD74d8EF3d6A22Fa8C7809e9d8FED0A",
+  "agent": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+  "owner": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+  "stocks": [
+    {
+      "symbol": "MOCK-AAPL",
+      "name": "MOCK Apple Inc (TESTNET ONLY - NOT A SECURITY)",
+      "address": "0xA0BFD72a7259AE2B2eCcEDa0ae65f268b634aD47",
+      "priceUsdc": 10.0,
+      "disclaimer": "MOCK / TESTNET ONLY. Not a security."
+    },
+    {
+      "symbol": "MOCK-NVDA",
+      "name": "MOCK NVIDIA Corp (TESTNET ONLY - NOT A SECURITY)",
+      "address": "0x5c1f3d726AFe83e4e0dC31e82f16B5555c387Ac2",
+      "priceUsdc": 20.0,
+      "disclaimer": "MOCK / TESTNET ONLY. Not a security."
+    }
+  ],
+  "policy": {
+    "allocationBps": 7000,
+    "operatingReserveTarget": "50000000",
+    "perTxCap": "40000000",
+    "dailyCap": "80000000"
+  },
+  "mockStocks": true,
+  "notes": "Mock stock tokens. Official Coinbase tokenized stocks are Base mainnet only (chain 8453). This deploy is Base Sepolia only.",
+  "results": {
+    "x402PaymentTx": "0x668fc1435496a3d1c5676f25a1e1f4a6d978d9e9205dea57aeab417c6eb64ec7",
+    "syncRevenueTx": "0xac17b2dffa5bac27e4028de7d000642af04b480d97fb5bbd45971304f9f0727e",
+    "operatingCostTx": "0x8ad63ce26e5699bed555222782fcc77d50ec06c72c8c495c17b76e0a697da927",
+    "allocateTx": "0x0a890f36482acfc01cbdd535ee40a6aa94c267d92ab5b6dd2a404cdfd299c2de",
+    "reserveBreachTx": "0x2cf00ca154dee4d76f565d134c0b857feaddc665fc7494df384331083da0b448",
+    "reserveBreachStatus": 0,
+    "reserveBreachBlock": 57884315,
+    "final": {
+      "usdcBalance": "100 USDC",
+      "reserve": "50 USDC",
+      "investable": "30 USDC",
+      "retained": "20 USDC",
+      "mockAapl": "4.0 MOCK-AAPL"
+    }
+  },
+  "funding": {
+    "method": "Official L1StandardBridge Ethereum Sepolia -> Base Sepolia",
+    "bridge": "0xfd0Bf71F60660E2f608ed56e1659C450eB113120",
+    "amountEth": "0.2",
+    "l1Tx": "0x5929a37346f4e30aa7450dccec42599687a9b0fa9e4a103832addeb19c956a45",
+    "l1Explorer": "https://sepolia.etherscan.io/tx/0x5929a37346f4e30aa7450dccec42599687a9b0fa9e4a103832addeb19c956a45",
+    "l1Block": 12119817,
+    "l1TimeWib": "2026-11-12 22:45:24 WIB",
+    "l2CreditEth": "0.2",
+    "notes": "Circle USDC faucet is captcha-gated (recaptcha on faucet.circle.com); CDP faucet requires login. Used labeled MockUSDC on Base Sepolia. Official Circle USDC (0x036CbD53842c5426634e7929541eC2318f3dCF7e) was not used because we could not obtain test USDC without a captcha."
+  },
+  "createTxs": {
+    "vault": "0xc6a9c24316DF6305a2CA994C70e33E22eF1238AE",
+    "vaultCreateTx": "0x33524318685f7548e9a2cd7eb37a12d3ce1152e26bbb3a815c04e88a2b5eabeb",
+    "usdc": "0xa64f084E7701d00058f6C39F59D5C8669b280AA0",
+    "usdcKind": "MockUSDC (EIP-3009, labeled testnet only \u2014 not Circle USDC)",
+    "usdcCreateTx": "0xf2c6651bfe0d118662b3a37772f48ae4a993679bf2b4a88f00f26baf0e3d265e",
+    "router": "0x7845C91DccD74d8EF3d6A22Fa8C7809e9d8FED0A",
+    "mockAapl": "0xA0BFD72a7259AE2B2eCcEDa0ae65f268b634aD47",
+    "mockNvda": "0x5c1f3d726AFe83e4e0dC31e82f16B5555c387Ac2",
+    "setPolicyTx": "0x098ccaca8b05671868c18bd344ad4caef7c8eeb5df62b7bbba4f96f0d60d4f48"
+  }
+}

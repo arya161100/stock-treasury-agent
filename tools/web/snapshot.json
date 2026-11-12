@@ -1,0 +1,180 @@
+{
+  "updatedAt": 1794498709,
+  "deployment": {
+    "network": "base-sepolia",
+    "chainId": 84532,
+    "explorer": "https://sepolia.basescan.org",
+    "usdc": "0xa64f084E7701d00058f6C39F59D5C8669b280AA0",
+    "usdcKind": "mock",
+    "vault": "0xc6a9c24316DF6305a2CA994C70e33E22eF1238AE",
+    "router": "0x7845C91DccD74d8EF3d6A22Fa8C7809e9d8FED0A",
+    "agent": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+    "owner": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+    "stocks": [
+      {
+        "symbol": "MOCK-AAPL",
+        "name": "MOCK Apple Inc (TESTNET ONLY - NOT A SECURITY)",
+        "address": "0xA0BFD72a7259AE2B2eCcEDa0ae65f268b634aD47",
+        "priceUsdc": 10.0,
+        "disclaimer": "MOCK / TESTNET ONLY. Not a security."
+      },
+      {
+        "symbol": "MOCK-NVDA",
+        "name": "MOCK NVIDIA Corp (TESTNET ONLY - NOT A SECURITY)",
+        "address": "0x5c1f3d726AFe83e4e0dC31e82f16B5555c387Ac2",
+        "priceUsdc": 20.0,
+        "disclaimer": "MOCK / TESTNET ONLY. Not a security."
+      }
+    ],
+    "policy": {
+      "allocationBps": 7000,
+      "operatingReserveTarget": "50000000",
+      "perTxCap": "40000000",
+      "dailyCap": "80000000"
+    },
+    "mockStocks": true,
+    "notes": "Mock stock tokens. Official Coinbase tokenized stocks are Base mainnet only (chain 8453). This deploy is Base Sepolia only."
+  },
+  "preview": {
+    "usdc": "0xa64f084E7701d00058f6C39F59D5C8669b280AA0",
+    "owner": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+    "agent": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+    "router": "0x7845C91DccD74d8EF3d6A22Fa8C7809e9d8FED0A",
+    "allocationBps": 7000,
+    "allocationPct": 70.0,
+    "operatingReserveTarget": "50.000000",
+    "operatingReserveTargetRaw": "50000000",
+    "perTxCap": "40.000000",
+    "dailyCap": "80.000000",
+    "dailyUsed": "40.000000",
+    "paused": false,
+    "policySet": true,
+    "usdcBalance": "100.000000",
+    "investable": "30.000000",
+    "reservedEffective": "50.000000",
+    "retained": "20.000000",
+    "lastAccounted": "100.000000"
+  },
+  "holdings": [
+    {
+      "token": "0xA0BFD72a7259AE2B2eCcEDa0ae65f268b634aD47",
+      "raw": "4000000000000000000",
+      "human": "4.000000"
+    },
+    {
+      "token": "0x5c1f3d726AFe83e4e0dC31e82f16B5555c387Ac2",
+      "raw": "0",
+      "human": "0.000000"
+    }
+  ],
+  "log": [
+    {
+      "step": "x402-payment",
+      "ok": true,
+      "tx": "0x668fc1435496a3d1c5676f25a1e1f4a6d978d9e9205dea57aeab417c6eb64ec7",
+      "value": "150000000",
+      "ticker": "MOCK-AAPL"
+    },
+    {
+      "step": "syncRevenue",
+      "ok": true,
+      "tx": "0xac17b2dffa5bac27e4028de7d000642af04b480d97fb5bbd45971304f9f0727e",
+      "preview": {
+        "usdc": "0xa64f084E7701d00058f6C39F59D5C8669b280AA0",
+        "owner": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+        "agent": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+        "router": "0x7845C91DccD74d8EF3d6A22Fa8C7809e9d8FED0A",
+        "allocationBps": 7000,
+        "allocationPct": 70.0,
+        "operatingReserveTarget": "50.000000",
+        "operatingReserveTargetRaw": "50000000",
+        "perTxCap": "40.000000",
+        "dailyCap": "80.000000",
+        "dailyUsed": "0.000000",
+        "paused": false,
+        "policySet": true,
+        "usdcBalance": "150.000000",
+        "investable": "70.000000",
+        "reservedEffective": "50.000000",
+        "retained": "30.000000",
+        "lastAccounted": "150.000000"
+      }
+    },
+    {
+      "step": "payOperatingCost",
+      "ok": true,
+      "tx": "0x8ad63ce26e5699bed555222782fcc77d50ec06c72c8c495c17b76e0a697da927",
+      "value": "10000000",
+      "preview": {
+        "usdc": "0xa64f084E7701d00058f6C39F59D5C8669b280AA0",
+        "owner": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+        "agent": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+        "router": "0x7845C91DccD74d8EF3d6A22Fa8C7809e9d8FED0A",
+        "allocationBps": 7000,
+        "allocationPct": 70.0,
+        "operatingReserveTarget": "50.000000",
+        "operatingReserveTargetRaw": "50000000",
+        "perTxCap": "40.000000",
+        "dailyCap": "80.000000",
+        "dailyUsed": "0.000000",
+        "paused": false,
+        "policySet": true,
+        "usdcBalance": "140.000000",
+        "investable": "70.000000",
+        "reservedEffective": "50.000000",
+        "retained": "20.000000",
+        "lastAccounted": "140.000000"
+      }
+    },
+    {
+      "step": "allocate",
+      "ok": true,
+      "tx": "0x0a890f36482acfc01cbdd535ee40a6aa94c267d92ab5b6dd2a404cdfd299c2de",
+      "value": "40000000",
+      "stock": "0xA0BFD72a7259AE2B2eCcEDa0ae65f268b634aD47",
+      "preview": {
+        "usdc": "0xa64f084E7701d00058f6C39F59D5C8669b280AA0",
+        "owner": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+        "agent": "0xA514D7E29abaEb5a4bc4932B0F488A4c20f69D22",
+        "router": "0x7845C91DccD74d8EF3d6A22Fa8C7809e9d8FED0A",
+        "allocationBps": 7000,
+        "allocationPct": 70.0,
+        "operatingReserveTarget": "50.000000",
+        "operatingReserveTargetRaw": "50000000",
+        "perTxCap": "40.000000",
+        "dailyCap": "80.000000",
+        "dailyUsed": "40.000000",
+        "paused": false,
+        "policySet": true,
+        "usdcBalance": "100.000000",
+        "investable": "30.000000",
+        "reservedEffective": "50.000000",
+        "retained": "20.000000",
+        "lastAccounted": "100.000000"
+      },
+      "holdings": [
+        {
+          "token": "0xA0BFD72a7259AE2B2eCcEDa0ae65f268b634aD47",
+          "raw": "4000000000000000000",
+          "human": "4.000000"
+        },
+        {
+          "token": "0x5c1f3d726AFe83e4e0dC31e82f16B5555c387Ac2",
+          "raw": "0",
+          "human": "0.000000"
+        }
+      ]
+    },
+    {
+      "step": "reserve-breach",
+      "ok": false,
+      "rejected": true,
+      "attempted": "50000001",
+      "error": "ReserveBreach",
+      "detail": "On-chain tx status=0, vault USDC unchanged at 100. ReserveBreach.",
+      "tx": "0x2cf00ca154dee4d76f565d134c0b857feaddc665fc7494df384331083da0b448",
+      "onChainStatus": 0
+    }
+  ],
+  "paymentTx": "0x668fc1435496a3d1c5676f25a1e1f4a6d978d9e9205dea57aeab417c6eb64ec7"
+}
